@@ -1,1 +1,1 @@
-# esp32-mqtt
+This project allows you to turn on and off an LED using MQTT commands sent to a broker. The implementation uses a microcontroller such as an ESP8266 or an ESP32 to connect to the broker and receive messages. Upon receiving a specific message, the microcontroller will turn the LED on or off accordingly. The use of MQTT provides a simple and efficient way to remotely control the LED and can be easily integrated into a larger IoT setup. This project is ideal for hobbyists, students, and anyone interested in exploring the capabilities of MQTT in IoT projects.
