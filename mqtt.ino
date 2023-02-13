@@ -6,12 +6,12 @@
 #define LED 33
 
 // WiFi
-const char *ssid = "Vodafone2.4Ghz"; // Enter your WiFi name
-const char *password = "Ne924YG4aA9HCZbY";  // Enter WiFi password
+const char *ssid = "xxxxxxxx"; // Enter your WiFi name
+const char *password = "xxxxxxxx";  // Enter WiFi password
 
 // MQTT Broker
-const char *mqtt_broker = "broker.emqx.io";
-const char *topic = "Led";
+const char *mqtt_broker = "broker.emqx.io"; //Enter your broker name
+const char *topic = "xx";
 const char *mqtt_username = "emqx";
 const char *mqtt_password = "public";
 const int mqtt_port = 1883;
@@ -62,8 +62,8 @@ void callback(char *topic, byte *payload, unsigned int length) {
         message = message + (char) payload[i];  // convert *byte to string
     }
     Serial.print(message);
-    if(message.indexOf("on") != -1) { Serial.print("dentro"); digitalWrite(LED, HIGH); delay(1000);}   // LED on
-    if(message.indexOf("off") != -1) { Serial.print("fuera");digitalWrite(LED, LOW); } // LED off
+    if(message.indexOf("on") != -1) { digitalWrite(LED, HIGH); delay(1000);}   // LED on
+    if(message.indexOf("off") != -1) { digitalWrite(LED, LOW); } // LED off
     Serial.println();
     Serial.println("-----------------------");
 }
